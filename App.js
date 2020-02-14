@@ -3,8 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import { createAppContainer } from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
 
-import WelcomeScreen from './screens/Welcome'
-import ExploreScreen from './screens/Explore'
+import WelcomeScreen from './src/screens/WelcomeScreen'
+import ExploreScreen from './src/screens/ExploreScreen'
 
 export default function App() {
   return (
