@@ -1,27 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { createAppContainer } from 'react-navigation'
-import { createStackNavigator } from 'react-navigation-stack'
+import AppContainer from './src/navigation'
 
-import WelcomeScreen from './src/screens/WelcomeScreen'
-import ExploreScreen from './src/screens/ExploreScreen'
-
-export default function App() {
-  return (
-    <View style={{ flex:1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Plant</Text>
-    </View>
-  );
+export default function App () {
+  return <AppContainer/>
 }
-
-const AppNavigator = createStackNavigator(
-  {
-    Welcome: WelcomeScreen,
-    Explore: ExploreScreen
-  },
-  {
-    initialRouteName: 'Welcome'
-  }
-)
-
-export default createAppContainer(AppNavigator)
