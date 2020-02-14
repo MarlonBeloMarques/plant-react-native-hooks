@@ -1,6 +1,6 @@
-import { Asset, Font } from 'expo'
+import { Font } from 'expo'
 import { Image } from 'react-native'
-
+import { Asset } from 'expo-asset'
 
 
 // Para uma melhor experiência do usuário, é necessário fazer o download e armazenar em cache certos ativos antes mesmo de o aplicativo ser iniciado.

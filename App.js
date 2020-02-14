@@ -16,11 +16,14 @@ export default function App (props) {
 
   console.disableYellowBox = true
 
-  if(isReady) {
+  if(!isReady) {
     return (
       <AppLoading
-        startAsync={this.loadAssetsAsynchrously}
-        onFinish = {setisReady(true)}
+        startAsync={loadAssetsAsynchrously}
+        onFinish = { () => {
+          setisReady(true); 
+          console.log('Apploading complete')
+        }}
         onError={console.warn}
       />
     )
