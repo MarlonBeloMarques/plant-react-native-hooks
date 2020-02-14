@@ -1,6 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AppContainer from './src/navigation'
+import { View } from 'react-native'
 
-export default function App () {
-  return <AppContainer/>
+import * as PreloadingAssets from './src/utils/PreloadingAssets'
+import { AppLoading } from 'expo';
+
+export default function App (props) {
+  
+  const [isReady, setisReady] = useState(false)
+
+  const loadAssetsAsynchrously = () => {
+    const imageAssets = PreloadingAssets.cacheImages()
+    const fontsAssets = PreloadingAssets.cacheFonts()
+  }
+
+  console.disableYellowBox = true
+
+  if(isReady) {
+    return (
+      <AppLoading
+        startAsync={this.loadAssetsAsynchrously}
+        onFinish = {setisReady(true)}
+        onError={console.warn}
+      />
+    )
+  }
+  else {
+    return <AppContainer /> 
+  }
 }
