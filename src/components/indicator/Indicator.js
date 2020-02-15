@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Animated, Easing } from "react-native";
 import RN from "react-native/package";
 
+//configurações de versão
 const [major, minor] = RN.version.split(".").map(item => Number(item));
 const hasLoopSupport = !major && minor >= 45;
 
@@ -55,7 +56,7 @@ export default function Indicator(props) {
       animation.start(startAnimation);
     }
 
-    setIsProgress(animation)
+    setIsProgress({animation})
   }
 
   function stopAnimation() {
@@ -82,7 +83,7 @@ export default function Indicator(props) {
     return () => {
       mounted = false;
     }
-  }, [])
+  })
 
   useEffect(() => {
     let { animating } = props;
@@ -94,7 +95,7 @@ export default function Indicator(props) {
         startAnimation();
       }
     }
-  })
+  }, [props.animating])
 
   function renderComponent(undefined, index) {
     let { progress } = isProgress
@@ -106,8 +107,6 @@ export default function Indicator(props) {
       return null;
     }
   }
-
-  let { count, ...props } = props;
 
   return (
     <Animated.View {...props}>

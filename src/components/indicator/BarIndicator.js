@@ -104,8 +104,6 @@ export default function BarIndicator(props) {
     );
   }
 
-  let { style, ...props } = this.props;
-
   return (
     <Indicator
       style={[styles.container, style]}

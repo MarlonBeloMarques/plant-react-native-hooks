@@ -46,13 +46,11 @@ export default function DotIndicator(props) {
 
     return <Animated.View style={style} {...{ key: index }} />
   }
-
-  const { style, ...props } = this.props;
   
   return (
     <Indicator
       style={[styles.container, style]}
-      renderComponent={this.renderComponent}
+      renderComponent={renderComponent}
       {...props}
     />
   )
