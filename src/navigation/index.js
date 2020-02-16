@@ -1,7 +1,7 @@
 import React from "react"
 import { createAppContainer } from "react-navigation"
 import { createStackNavigator } from 'react-navigation-stack'
-import { Image } from "react-native"
+import { Platform, Image } from 'react-native'
 
 import WelcomeScreen from "../screens/WelcomeScreen"
 import LoginScreen from "../screens/LoginScreen"
@@ -24,13 +24,25 @@ const screens = createStackNavigator(
     settings: SettingsScreen
   },
   {
-    initialRouteName: "welcome",
     defaultNavigationOptions: {
-      headerStyle: {},
-      headerBackImage: <Image />,
+      headerStyle: {
+        height: theme.sizes.base * 6,
+        backgroundColor: theme.colors.white,
+        borderBottomColor: 'transparent', 
+        elevation: 0 // for android devices. Disabling the elevation of header
+      },
+      headerBackImage: <Image source={require('../../assets/icons/back.png')} />,
       headerBackTitle: null,
-      headerLeftContainerStyle: {},
-      headerRightContainerStyle: {}
+      headerLeftContainerStyle: {
+        alignItems: 'center',
+        marginLeft: Platform.OS === 'ios' ? theme.sizes.base : 0,
+        padding: theme.sizes.base
+      },
+      headerRightContainerStyle: {
+        alignItems: 'center',
+        marginLeft: Platform.OS === 'ios'? theme.sizes.base : 0,
+        padding: theme.sizes.base
+      }
     }
   }
 );
