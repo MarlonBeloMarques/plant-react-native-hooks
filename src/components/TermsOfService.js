@@ -11,7 +11,7 @@ const  termsOfService = (props) => {
         animationType = "slide"
         onRequestClose = {props.onRequestClose}
       >
-        <Block
+       <Block
           padding = {[theme.sizes.padding * 2, theme.sizes.padding]}
           space="between"
           color={theme.colors.white}
@@ -23,10 +23,7 @@ const  termsOfService = (props) => {
             renderItem= {({item, index}) => 
               <Text
                 key={`${index}`}
-                caption
-                gray
-                height={24}
-                style={{ marginBottom: theme.sizes.base }}>
+                style={{ marginBottom: theme.sizes.base, color: theme.colors.gray }}>
                 {`${index+1}.${item}`}
               </Text>
             }
@@ -36,19 +33,17 @@ const  termsOfService = (props) => {
             padding = {[theme.sizes.padding/2,0]}>
              <Button gradient onPress = {props.onRequestClose}>
               <Text center white> I agree</Text>   
-            </Button> 
-          </Block>
-        </Block>
+            </Button>
+             </Block>
+        </Block> 
     </Modal>
   )
 }
 
 termsOfService.propTypes = {
   visible: false,
-  terms: [
-    'Your use of the Service is at your sole risk. The service is provided on an "as is" and "as available" basis. You understand that the technical processing and transmission of the Service, including your Content, may be transferred unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices.'
-  ],
-  onRequestClose: () => {},
+  terms: [''],
+  onRequestClose: () => {}
 };
 
 export default termsOfService

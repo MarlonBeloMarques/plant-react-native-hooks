@@ -22,13 +22,16 @@ export default function App (props) {
         startAsync={loadAssetsAsynchrously}
         onFinish = { () => {
           setisReady(true); 
-          console.log('Apploading complete')
         }}
         onError={console.warn}
       />
     )
   }
   else {
-    return <AppContainer /> 
+    return (
+      <View style={{flex: 1}}>
+        <AppContainer />
+      </View>
+    ); 
   }
 }

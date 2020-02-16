@@ -77,7 +77,7 @@ export default function Typography(props) {
     ];
 
     return (
-      <Text style={textStyles} {...props}>
+      <Text style={textStyles} >
         {children}
       </Text>
     );

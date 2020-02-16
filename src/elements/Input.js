@@ -77,7 +77,7 @@ export default function Input(props) {
     : phone
     ? "phone-pad"
     : "default";
-    
+
   return (
     <Block flex={false} margin={[theme.sizes.base, 0]}>
       {renderLabel()}
@@ -88,7 +88,6 @@ export default function Input(props) {
         autoCapitalize="none"
         autoCorrect={false}
         keyboardType={inputType}
-        {...props}
       />
       {renderToggle()}
       {renderRight()}

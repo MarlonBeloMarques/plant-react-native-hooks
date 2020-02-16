@@ -108,7 +108,6 @@ export default function BarIndicator(props) {
     <Indicator
       style={[styles.container, style]}
       renderComponent={this.renderComponent}
-      {...props}
     />
   );
 }

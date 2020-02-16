@@ -115,7 +115,7 @@ export default function Block(props) {
     animated,
     wrap,
     style,
-    children  
+    children
   } = props;
 
   const blockStyles = [
@@ -142,14 +142,14 @@ export default function Block(props) {
   ];
   if (animated) {
     return (
-      <Animated.View style={blockStyles} {...props}>
+      <Animated.View style={blockStyles} >
         {children}
       </Animated.View>
     );
   }
 
     return (
-      <View style={blockStyles} {...props}>
+      <View style={blockStyles}>
         {children}
       </View>
     );

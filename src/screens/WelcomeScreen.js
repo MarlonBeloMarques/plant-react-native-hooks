@@ -5,7 +5,8 @@ import {
   Dimensions,
   StyleSheet,
   FlatList,
-  Image
+  Image,
+  ScrollView
 } from "react-native";
 
 import { Block, Text, Button } from "../elements";
@@ -45,14 +46,13 @@ export default function WelcomeScreen(props) {
       <TermsOfService
         visible={showTermsOfService}
         onRequestClose={onHideTermsOfService}
-    ></TermsOfService>
-    )
+        terms={['Your use of the Service is at your sole risk. The service is provided on an "as is" and "as available" basis. You understand that the technical processing and transmission of the Service, including your Content, may be transferred unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices.']}
+      ></TermsOfService>
+    );
   }
 
     function renderIllustrations() {
       const { illustrations } = props;
-
-      console.log(props);
 
       return (
         <FlatList
@@ -98,7 +98,7 @@ export default function WelcomeScreen(props) {
                 key={`step-${item.id}`}
                 animated
                 flex={false}
-                style={[styles.steps, { opacity }]}
+                style={[styles.steps, {opacity}]}
                 color={theme.colors.gray}
               />
             );
@@ -109,8 +109,8 @@ export default function WelcomeScreen(props) {
 
     function renderWelcomeScreen() {
       return (
-        <Block>
-          <Block flex={0.4} center bottom>
+        <Block color={theme.colors.white}>
+          <Block flex={0.4} center bottom color={theme.colors.white}>
             <Text h1 center bold>
               Plants.
               <Text h1 primary>
@@ -156,7 +156,6 @@ export default function WelcomeScreen(props) {
     }
 
       if (showTermsOfService) {
-        console.log('mostrar termos')
         return renderTermsOfService();
       }
       return renderWelcomeScreen()
@@ -166,7 +165,7 @@ export default function WelcomeScreen(props) {
 const styles = StyleSheet.create({
   stepsContainer: {
     position: "absolute",
-    bottom: theme.sizes.base * 3,
+    bottom: theme.sizes.base * 2,
     right: 0,
     left: 0
   },
@@ -174,7 +173,8 @@ const styles = StyleSheet.create({
     width: 5,
     height: 5,
     borderRadius: 5,
-    marginHorizontal: 2.5
+    marginHorizontal: 2.5,
+    backgroundColor: 'gray'
   }
 });
 

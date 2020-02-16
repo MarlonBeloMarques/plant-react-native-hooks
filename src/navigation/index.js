@@ -27,12 +27,13 @@ const screens = createStackNavigator(
     defaultNavigationOptions: {
       headerStyle: {
         height: theme.sizes.base * 6,
-        backgroundColor: theme.colors.white,
-        borderBottomColor: 'transparent', 
+        backgroundColor: theme.colors.white, 
+        shadowColor: 'transparent',
         elevation: 0 // for android devices. Disabling the elevation of header
       },
       headerBackImage: <Image source={require('../../assets/icons/back.png')} />,
-      headerBackTitle: null,
+      headerBackTitleVisible: null,
+      title: null,
       headerLeftContainerStyle: {
         alignItems: 'center',
         marginLeft: Platform.OS === 'ios' ? theme.sizes.base : 0,

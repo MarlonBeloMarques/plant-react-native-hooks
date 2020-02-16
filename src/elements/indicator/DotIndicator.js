@@ -51,7 +51,6 @@ export default function DotIndicator(props) {
     <Indicator
       style={[styles.container, style]}
       renderComponent={renderComponent}
-      {...props}
     />
   )
   

@@ -109,7 +109,7 @@ export default function Indicator(props) {
   }
 
   return (
-    <Animated.View {...props}>
+    <Animated.View>
       {Array.from(new Array(count), renderComponent)}
     </Animated.View>
   );
