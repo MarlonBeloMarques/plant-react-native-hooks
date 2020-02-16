@@ -8,7 +8,7 @@ import {
   Image
 } from "react-native";
 
-import { Block, Text, Button } from '../components' 
+import { Block, Text, Button } from '../elements' 
 import { theme } from '../constants/index' 
 
 const { width, height } = Dimensions.get('window')
