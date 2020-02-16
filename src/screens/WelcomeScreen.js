@@ -109,8 +109,8 @@ export default function WelcomeScreen(props) {
 
     function renderWelcomeScreen() {
       return (
-        <Block color={theme.colors.white}>
-          <Block flex={0.4} center bottom color={theme.colors.white}>
+        <Block>
+          <Block flex={0.4} center bottom>
             <Text h1 center bold>
               Plants.
               <Text h1 primary>

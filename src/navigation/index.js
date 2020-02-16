@@ -27,10 +27,11 @@ const screens = createStackNavigator(
     defaultNavigationOptions: {
       headerStyle: {
         height: theme.sizes.base * 6,
-        backgroundColor: theme.colors.white, 
         shadowColor: 'transparent',
+        backgroundColor: theme.colors.white, 
         elevation: 0 // for android devices. Disabling the elevation of header
       },
+      cardStyle: {backgroundColor: 'white'},
       headerBackImage: <Image source={require('../../assets/icons/back.png')} />,
       headerBackTitleVisible: null,
       title: null,
