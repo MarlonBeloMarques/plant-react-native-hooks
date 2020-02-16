@@ -46,8 +46,7 @@ const  termsOfService = (props) => {
 termsOfService.propTypes = {
   visible: false,
   terms: [
-    'Your use of the Service is at your sole risk. The service is provided on an "as is" and "as available" basis.',
-    "You understand that the technical processing and transmission of the Service, including your Content, may be transferred unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices."
+    'Your use of the Service is at your sole risk. The service is provided on an "as is" and "as available" basis. You understand that the technical processing and transmission of the Service, including your Content, may be transferred unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices.'
   ],
   onRequestClose: () => {},
 };
