@@ -64,15 +64,15 @@ export default function LoginScreen(props) {
         <Block middle>
           <Input
             label="Email"
-            style={styles.input}
-            error={errorStyle("email")}
+            error = {errorStyle('email')}
+            style={[styles.input, errorStyle('email')]}
             defaultValue={email}
             onChangeText={text => onEmailTextChanged(text)}
           />
           <Input
             secure
             label="Password"
-            style={styles.input}
+            style={[styles.input, errorStyle('password')]}
             error={errorStyle("password")}
             defaultValue={password}
             onChangeText={(text) => onPasswordTextChanged(text)}
