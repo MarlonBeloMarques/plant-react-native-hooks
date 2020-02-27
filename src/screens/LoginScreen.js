@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 //import PropTypes from 'prop-types'
-import { View, ActivityIndicator, Platform, StyleSheet, KeyboardAvoidingView} from "react-native";
-import { Block, Input, Button, Text } from '../elements';
+import { Keyboard, Platform, StyleSheet, KeyboardAvoidingView} from "react-native";
+import { Block, Input, Button, Text, DotIndicator } from '../elements';
 import {theme} from '../constants';
-import {DotIndicator} from '../elements'; 
 import { CommonUtils } from '../utils'
 
 const VALID_PASSWORD = "react";
@@ -23,6 +22,7 @@ export default function LoginScreen(props) {
 
   //Server side mockup
   async function onLoginClicked() {
+    Keyboard.dismiss()
     setLoading(true)
     await CommonUtils.wait(2000)
     const errors = []
