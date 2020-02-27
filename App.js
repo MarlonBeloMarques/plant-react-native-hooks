@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import AppContainer from './src/navigation'
 import { View } from 'react-native'
 
-import * as PreloadingAssets from './src/utils/PreloadingAssets'
+import { PreloadingAssets } from './src/utils/PreloadingAssets'
 import { AppLoading } from 'expo';
 
 export default function App (props) {
