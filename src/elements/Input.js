@@ -32,7 +32,7 @@ export default function Input(props) {
     return (
       <Button
         style={styles.toggle}
-        onPress={() => this.setState({ toggleSecure: !toggleSecure })}
+        onPress={() => setIsToggleSecure({ toggleSecure: !toggleSecure })}
       >
         {rightLabel ? (
           rightLabel
@@ -44,7 +44,7 @@ export default function Input(props) {
           />
         )}
       </Button>
-    )
+    );
   }
 
   function renderRight() {

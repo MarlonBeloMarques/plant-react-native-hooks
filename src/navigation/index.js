@@ -10,6 +10,7 @@ import BrowseScreen from "../screens/BrowseScreen"
 import ProductsScreen from "../screens/ProductsScreen"
 import SettingsScreen from "../screens/SettingsScreen"
 import SignupScreen from "../screens/SignupScreen"
+import ForgotPasswordScreen from '../screens/ForgotPasswordScreen'
 
 import { theme } from "../constants";
 
@@ -17,6 +18,7 @@ const screens = createStackNavigator(
   {
     welcome: WelcomeScreen,
     login: LoginScreen,
+    forgot_password: ForgotPasswordScreen,
     signup: SignupScreen,
     explore: ExploreScreen,
     browse: BrowseScreen,
